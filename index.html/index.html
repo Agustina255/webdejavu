@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" type="img\CC_20211109_071207.png" a href="./img/CC_20211109_071207.png"
     <script src="https://kit.fontawesome.com/a5fb06686b.js" crossorigin="anonymous"></script>
+
     </head>
     <body>
     <header>
     
       <nav class="navbar">
         <div class="navbar-container">
-            <a href="../index.html/index.html" class="logo"><img src="img\CC_20211109_071207.png" width="60px"></a>
+            <a href="../index.html/index.html" class="logo"><img src="img\CC_20211109_071207.png" width="75px"></a>
             <ul class="nav-list">
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#productos">Productos</a></li>
@@ -33,96 +34,94 @@
        
         <video class="video" loop="true" muted autoplay >
           <source src="img\6942473-hd_1920_1080_25fps.mp4" type="video/mp4">
-          <source src="img\6942473-hd_1920_1080_25fps.mp4" type="video/webm">
-          </video>
-      
-      
-          <div class="contenedor"> 
-        <div id="nosotros" class="historia">
-          <h1>Desde 2019, a su servicio</h1>
-          <p> <strong>Dejávù</strong>- Con origen en la provincia de Córdoba, Argentina. Una propuesta gastronómica
-             que nace como un pequeño emprendimiento en casa, dedicado especialmente
-             a la elaboración de pastas frescas para ofrecer a baja escala, principalmente, a vecinos y gente allegada. <br>
-             Con el paso del tiempo, hemos incorporado nuevos productos que se acercan cada vez más a las necesidades 
-             demandadas por los paladares de nuestros clientes. <br>  
-             Nuestro compromiso es el de siempre: creemos en las largas sobremesas, la impronta
-             de lo casero, y en la inmortalidad
-             de la cocina de los abuelos. Nuestras fuerzas y energías están destinadas, precisamente,
-             a promover esa experiencia única; la de compartir un tiempo especial con la familia o entre amigos.<br>
-             La buena calidad de nuestros productos sumado a una dedicación minuciosa y una atención muy
-             personalizada, fueron forjando una marca con identidad propia. 
-             No hay secretos: los mejores
-             ingredientes y el cuidado de los procesos dan siempre, como resultado, un mejor producto.
-             
+          <source src="img\6942473-hd_1920_1080_25fps.mp4" type="video/webm">    </video>
+          <div class="text-overlay">
+            <h1>ESTAMOS PRODUCIENDO </h1>
+            
           </div>
+        </div>
+        
+
+
+        
+        <div class="modal" id="ventanaEmergente">
+          <div class="modal-contenido">
+              <span class="cerrar-modal" id="cerrarModal">&times;</span>
+              <div class="imagen-fondo">
+                  <!-- Aquí puedes colocar la imagen de fondo que desees -->
+                  <img src="img\Imagen de WhatsApp 2024-05-27 a las 15.12.02_267ac601.jpg" alt="Imagen de Fondo">
+                  <div class="titulo">
+                      <h2>¿Qué tenés ganas de comer hoy?</h2>
+                      <h3>TODOS LOS MARTES DESCUENTO EN RAVIOLES</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+          
+     
+        
+      
+    
+          <div class="contenedor1"> 
+        <div id="nosotros" class="historia">
+          <h1>Desde 2019, en el corazón de Córdoba</h1>
+          <p> Creemos en las largas sobremesas, en la esencia y el valor de lo casero.<br>
+            Nos inspira poder ser parte de tu mesa, por eso surge <strong>Dejávù</strong>. La posibilidad de acompañarte, a vos y a tu familia,
+            con nuestras masas artesanales.<br>
+            Tenemos un claro propósito; resolver tus comidas y brindarte sabores reconfortables, que perduren en tu memoria y paladar.
+  
+          </div>
+          <div class="show-button">
+            <button onclick="toggleTimeline()">Más historia</button>
+          </div>
+          </div>
+          <div class="timeline-container" id="timelineContainer">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-content left">
+                  <img src="img/PSX_20200501_150211.jpg" alt="Imagen 1">
+                  <div class="text">
+                    <h3>Sobre mí</h3>
+                    <p>Soy Agus Cabrera, desde chiquita descubrí que la cocina es mi pasión. Siempre apoyada por la familia, me formé como
+                       profesional gastronómica y luego de un tiempo comencé elaborando pastas caseras, con el objetivo primario de brindar felicidad en cada bocado.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content right">
+                  <img src="img/IMG-20240527-WA0043.jpg" alt="Imagen 2">
+                  <div class="text">
+                    <h3>Misión</h3>
+                    <p>Déjàvu nació para facilitarte un alimento de producción artesanal, con sabor familiar. Que podés cocinar en tan sólo unos pocos minutos y tener un plato especial en casa!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content left">
+                  <img src="img/pexels-klaus-nielsen-6287223.jpg" alt="Imagen 3">
+                  <div class="text">
+                    <h3>Creación</h3>
+                    <p>No utilizamos conservantes ni saborizantes artificiales en nuestros procesos de elaboración. El gusto y respeto por las materias primas de calidad, el amor por el trabajo y el orgullo familiar fueron actores claves de esta trayectoria.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content right">
+                  <img src="img/interior-restaurante-o-bistro-muebles-modernos-dibujados-mano-contornos-dibujo-mano-alzada-cafeteria-o-bar-amueblado-elegante-estilo-loft-ilustracion-vector-monocromo_198278-2242.avif" alt="Imagen 4">
+                  <div class="text">
+                    <h3>Visión</h3>
+                    <p>Anhelo tener mi primer local físico, como así también franquicias de la marca. Continúo aprendiendo y ejerciendo este noble oficio con mucho amor y compromiso. ¡Espero seguir aportando sabor a tu mesa por muchos años más!</p>
+                  </div>
+                </div>
+                <a href='https://cafecito.app/pastascaseras' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_5.png 1x, https://cdn.cafecito.app/imgs/buttons/button_5_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_5_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_5.png' alt='Invitame un café en cafecito.app'/></a>
+              </div>
+            </div>
           </div>
           
 
 
-
-
-
-
-
-<div class="timeline">
-  <div class="timeline-item">
-      <div class="timeline-content left">
-          <img src="img\PSX_20200501_150211.jpg" alt="Imagen 1">
-          <div class="text">
-              <h3>Sobre mí</h3>
-              <p>Soy Agus Cabrera, desde chiquita descubrí que la cocina es mi pasión. Siempre apoyada por la familia, 
-                me formé como profesional gastronómica y luego de un tiempo comencé elaborando pastas caseras, con el objetivo
-                primario de brindar felicidad en cada bocado. </p>
-          </div>
-      </div>
-  </div>
-  <div class="timeline-item">
-      <div class="timeline-content right">
-          <img src="img\IMG-20240527-WA0043.jpg" alt="Imagen 2">
-          <div class="text">
-              <h3>Misión</h3>
-              <p>Déjàvu nació para facilitarte un alimento confortable, de produción artesanal, con sabor familiar. Que podés cocinar 
-                en tan sólo unos pocos minutos y tener un plato especial en casa!  </p>
-          </div>  
-      </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-content left">
-        <img src="img\pexels-klaus-nielsen-6287223.jpg" alt="Imagen 3">
-        <div class="text">
-            <h3>Creación</h3>
-            <p> No utilizamos conservantes ni saborizantes artificiales en nuestros procesos de elaboración.
-              El gusto y respeto por las materias primas de calidad, el amor por el trabajo 
-              y el orgullo familiar fueron actores claves de esta trayectoria.</p>
-        </div>
-    </div>
-</div>
-  <div class="timeline-item">
-      <div class="timeline-content right">
-          <img src="img\interior-restaurante-o-bistro-muebles-modernos-dibujados-mano-contornos-dibujo-mano-alzada-cafeteria-o-bar-amueblado-elegante-estilo-loft-ilustracion-vector-monocromo_198278-2242.avif" alt="Imagen 4">
-          <div class="text">
-              <h3>Visión</h3>
-              <p>Anhelo próximamente tener mi primer local físico , 
-                como así también franquicias de la marca. Continúo aprendiendo y ejerciendo este noble oficio 
-                con mucho amor y compromiso.
-              ¡Espero seguir aportando sabor a tú mesa por muchos años más!</p>
-              
-          </div>
-      </div>
-  </div>
-</div>
-<a href='https://cafecito.app/pastascaseras' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_5.png 1x, https://cdn.cafecito.app/imgs/buttons/button_5_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_5_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_5.png' alt='Invitame un café en cafecito.app'/></a>
-
-
-
-
-                        
-                        
-
-
-
     <div class="container">
-     <h1 class="heading" id="productos"> Nuestros productos </h1>
+     <h1 class="heading" id="productos"> Nuestros productos</h1>
      <p>Visitá nuestro catálogo completo y adquirí tu producto favorito desde nuestro 
       <a href="https://wa.me/c/5493515574615"><span class="highlight">WhatsApp</span></a>
      </p>
@@ -130,38 +129,40 @@
       <div class="box">
         <img src="img\IMG-20240527-WA0002.jpg">
         <h3>Tallarines al huevo</h3>
+       
         <p>Linguini o también llamado tallarines, se trata de una pasta alargada y plana. Venta al peso. Compra mínima 500grs, rinde para 4 porciones abundantes. Aproximadamente 137 calorías por porción</p>
-        <a href="https://wa.me/c/5493515574615" class="btn">Ver más</a>
-      </div>
+        <a href="https://wa.me/c/5493515574615" class="btn" target="_blank">COMPRAR</a>
+  </div>
+
       <div class="box">
         <img src="img\IMG-20240527-WA0038.jpg">
         <h3>Sorrentinos de Jamón y muzarella</h3>
         <p>Pasta fresca o frezzada hecha a mano, con relleno clásico de jamón y muzarella, condimentado con sal y orégano. Se vende caja por 12 unidades, rinde 2 porciones.</p>
-        <a href="https://wa.me/c/5493515574615" class="btn"> Ver más</a>
-      </div>
+        <a href="https://wa.me/c/5493515574615" class="btn" target="_blank"> COMPRAR</a>
+      </div> 
       <div class="box">
         <img src="img\Imagen de WhatsApp 2024-05-27 a las 15.00.42_26a75acf.jpg">
         <h3>Sorrentinos de Espinaca y ricota</h3>
         <p>Pasta fresca o freezada con relleno de espinaca y ricota, condimentadocon sal y ajo. Se vende caja por 12 unidades, rinde 2 porciones</p>
-        <a href="https://wa.me/c/5493515574615" class="btn"> Ver más</a>
+        <a href="https://wa.me/c/5493515574615" class="btn" target="_blank"> COMPRAR</a>
       </div>
       <div class="box">
         <img src="img\Imagen de WhatsApp 2024-05-27 a las 15.12.02_267ac601.jpg">
         <h3>Ravioles de pollo y verdura</h3>
         <p> Ravioli o raviol es un tipo de pasta rellena, generalmente plegada en forma cuadrada. único relleno disponible pollo y verduras varias. Se vende caja por 15 unidades, rinde para 2 porciones
-        <br><a href="https://wa.me/c/5493515574615" class="btn"> Ver más</a>
+        <br><a href="https://wa.me/c/5493515574615" class="btn" target="_blank"> COMPRAR</a>
       </div>
       <div class="box">
         <img src="img\pexels-merve-205352359-17663528.jpg">
         <h3>Tallarines verdes</h3>
         <p>Linguini o también llamado tallarines, enriquecidos con espinaca en la composición de su masa. Le aporta vaor nutricional, color y sabor. Venta mínima 500grs </p>
-        <a href="https://wa.me/c/5493515574615" class="btn"> Ver más</a>
+        <a href="https://wa.me/c/5493515574615" class="btn" target="_blank">COMPRAR</a>
       </div>
       <div class="box">
         <img src="img\Imagen de WhatsApp 2024-05-27 a las 14.46.38_ec29c3ad.jpg">
         <h3>Edición especial</h3>
         <p>Sorrentinos formato corazón, consultar variedades. Se vende caja por 15 unidades, rinde 2 porciones</p>
-        <a href="https://wa.me/c/5493515574615" class="btn"> Ver más</a>
+        <a href="https://wa.me/c/5493515574615" class="btn" target="_blank"> COMPRAR</a>
       </div>
      </div>
     </div>
@@ -180,8 +181,8 @@
     
     <div class="contenedor">
     <div class="recetas">
-    <h1 id="recetas">Recetas</h1><br>
-    <p>El éxito de una buena pasta es acompañarla de una exquisita salsa. Aquí algunas ideas, para que ¡Prepares las tuyas!</p>
+    <h1 id="recetas">#DéjàvuRecetas para que pruebes!</h1><br>
+    <p>El éxito de una buena pasta, es acompañarla de una exquisita salsa. </p>
   </div>
     <div class="cards">
       <div class="card">
@@ -237,7 +238,7 @@
         <img src="img\IMG-20240527-WA0069.jpg" width="300px" height="300px">
         <div class="content">
           <h3>Fideos gratinados al horno | MEJORES RECETAS</h3>
-          <p>Los Tallarines gratinados al horno son una deliciosa opción para los amantes de la pasta. Aquí tienes una receta sencilla para prepararlos:</p>
+          <p>Los Tallarines gratinados al horno son una deliciosa opción para los amantes de la pasta. ¿Qurés aprender más sobre los secretos para igualar la pasta Italiana? Aquí tienes una receta sencilla para prepararlos:</p>
           <p class="texto-completo"><br><strong>Ingredientes</strong>(para 4 personas):<br>
           - Salsa blanca<br>
           - Fideos cinta <strong>Déjàvu</strong> 250 grs.<br>
@@ -274,11 +275,68 @@ Colocar el queso rallado en la superficie y salpimentar a gusto.<br>
               2- Dorar la panceta en una sartén a fuego bajo, durante unos 10 minutos. No debe quemarse. Reservar cuando esté dorado.<br>
               3- En un bol batir las yemas e incorporar el queso rallado y panceta que se realizo anteriormente.<br>
               4- Condimentar con un poco de sal y pimienta, con un tenedor batir para unir todo.<br>
-              5- Integrar junto con la pasta ya cocida. ¡A disfrutar!</p><br>
+              5- Integrar junto con la pasta ya cocida. ¡A disfrutar!</p><br><br>
           </div>
           <div class="botton">
             <button class="leer-mas"> Leer más</button>
           </div>
+        </div>
+          <div class="card">
+            <img src="img\IMG-20240527-WA0066.jpg" width="300px" height="300px">
+            <div class="content">
+              <h3>BAGNA CAUDA: En 5 pasos</h3>
+              <p>El Bagna cauda es un plato muy popular en Argentina. Se trata de una deliciosa salsa hecha con anchoas, ajos y se sirve con vegetales, panes y carnes. 
+                La versión argentina lleva crema de leche, la cual la vuelve cremosa y deliciosa. </p>
+              <p class="texto-completo"><br> <strong>Ingredientes</strong> (para 5 personas):<br>
+                Para Bagna:<br>
+                - 5 dientes de ajos<br>
+                - 5 anchoas<br>
+                - 1/2 lt. de crema de leche<br>
+                - 1 puñado de nueces<br>
+               Acompañantes:<br>
+               - Brócoli, coliflor, papas chicas, zanahoria, tallos de apio,  repollitos de bruselas c/n <br>
+               - 1 caja  de ravioles <strong>Déjavù</strong><br>
+               - Sal y pimienta negra c/n<br>
+                <strong>Procedimiento:</strong><br>
+                1- Licuar los ajos y las anchoas, agregar una cucharada de aceite de oliva y triturar hasta obtener una pasta.<br>
+                2- Colocar dicha pasta en una olla antiadherente y cocinar a fuego mínimo mientras revolvemos.<br>
+                3- Luego de unos minutos, cuando la pasta cambie a un color más oscuro, agregar la crema de leche. <br>
+                4- Agregar un puñado de nueces picadas (opcional) y seguir cocinando durante unos minutos hasta que la crema reduzca un poco.<br>
+                </p><br><br>
+            </div>
+            <div class="botton">
+              <button class="leer-mas"> Leer más</button>
+            </div>
+          </div>
+            <div class="card">
+            <img src="img\IMG-20240527-WA0071.jpg" width="300px" height="300px">
+            <div class="content">
+              <h3>Sorrentinos con salsa,cocinados al disco de arado</h3>
+              <p>¡Animate a preparar ésta receta!<br> La coción a leña le aporta un sabor único. Las pastas se pueden cocer en su salsa al disco o de la manera tradicional; cocinarlas aparte y luego incorporarlas.</p>
+              <p class="texto-completo"><br> <strong>Ingredientes</strong> (para cuatro personas):<br>
+                -2 planchas de sorrentinos <strong>Déjavù</strong> <br>
+                - 2 cebollas blancas medianas<br>
+                - 200grs cebolla de verdeo <br>
+                - 100 gr de puerro<br>
+                - 100 gr de perejil picado<br>
+                - 4 bifes de osobuco o 300 gr de champiñones<br>
+                - 200 cm caldo de verduras<br>
+                - 1 taza de vino a su elección<br>
+                <strong>Procedimiento:</strong><br>
+                1- Calentamos el disco de arado con un poco de aceite de oliva y ponemos todas las verdura a rehogar,
+                 cuando estén lista, retirar.<br>
+                2- Ponemos a sellar la carne u hongos, no por mucho tiempo(sólo dorar).<br>
+                3- Luego levantamos el fondo de cocción con taza de vino, cuando evapore, agregar caldo de verduras caliente y volvemos a 
+                 incorporar las verduras ya rehogadas.<br>
+                4- Cuando esté casi cocida la carne, agregamos las pastas. Si es necesario rectificar cantidad de caldo para que alcance a cubrir los sorrentinos. 
+                A lo último antes de servir agregamos el perejil picado.<br>
+          
+                
+
+            </div>
+            <div class="botton">
+              <button class="leer-mas"> Leer más</button>
+            </div>  
     </div>
       </div>
     </div>
@@ -315,60 +373,91 @@ Colocar el queso rallado en la superficie y salpimentar a gusto.<br>
       </div>
   </div>
 </div>
-
-
-
-
-
-<div class="productosdestacados">
-    <div id="destacados"class="destacados">
-      <img src="img/IMG-20240527-WA0003.jpg" height="750px" >
-        <div class="textdestacados">
-          <h1>Destacado</h1>
-        <p>Conocé la nueva línea de productos de Panificación prefermemntada Déjàvu.
-           LLegó la solución gastronómica para tu negocio y hogar.
-           Medialunas 100% caseras, hechas con "masa madre".</p> 
-    </div>
-  </div>
-  <div id="destacados"class="destacados">
-    <img src="img\Imagen de WhatsApp 2024-06-17 a las 10.31.19_a2c03799.jpg" height="750px" >
+<div class="productosdestacados" id="destacados">
+  <div id="destacados1" class="destacados">
+      <img src="img/IMG-20240527-WA0003.jpg" height="750px">
       <div class="textdestacados">
-        <h1>Destacado</h1>
-      <p>¡Tenemos postre! Lemon pie Dejávù, para que hagas tus momentos más dulces. Base de masa sablée, relleno cítrico y merengue.
-        Elaboración sólo por encargo.
-      </p> 
+          <h1>DESTACADO</h1>
+          <p>Conocé la nueva línea de productos de Panificación prefermentada Déjàvu.
+             LLegó la solución gastronómica para tu negocio y hogar.
+             Medialunas 100% caseras, hechas con "masa madre".</p>
+      </div>
+  </div>
+  <div id="destacados2" class="destacados">
+      <img src="img\Imagen de WhatsApp 2024-06-17 a las 10.31.19_a2c03799.jpg" height="750px">
+      <div class="textdestacados">
+          <h1>DESTACADO</h1>
+          <p>¡Tenemos postre! Lemon pie Dejávù, para que hagas tus momentos más dulces. Base de masa sablée, relleno cítrico y merengue.
+            Elaboración sólo por encargo.</p>
+      </div>
   </div>
 </div>
+
+<!-- Modal 1 oculto inicialmente -->
+<div class="modal" id="modal1">
+  <div class="contenido-modal">
+      <!-- Botón de cierre del modal -->
+      <span id="cerrarModal1">&times;</span>
+      <!-- Contenido del modal -->
+      <h2>Panificados congelados recién horneados en tu comercio para que deleites a tus clientes</h2><br>
+      <p>Serví el producto con la frescura de haberlo sacado recién del horno 
+         las 24hs, sin desperdicios y evitando faltantes de stock.<br>
+        La técnica de congelado, nos permite elaborar a escala, sin alterar sabor ni textura. Siendo una opción 
+        práctica y rentable para tu negocio.<br>
+        Por consultas y petición de lista de precios al por mayor, envíanos directamente un mail:
+          <strong>alimentos.dejavu@gmail.com </strong><br></p>
+  </div>
 </div>
 
-  
-   
-  
+<!-- Modal 2 oculto inicialmente -->
+<div class="modal" id="modal2">
+  <div class="contenido-modal">
+      <!-- Botón de cierre del modal -->
+      <span id="cerrarModal2">&times;</span>
+      <!-- Contenido del modal -->
+      <h2>Lemon pie y otras opciones dulces</h2>
+      <p>Producto listo para el consumo. Ideal para porcionar y vender en tu local o para disfrutar en casa con tu gente.<a href="api.whatsapp.com/send?phone=5493515574615"<span class="highlight"> Ir al catálogo</span></a> 
+         </p>
+  </div>
+</div>
 
-  
 
-
-
-
- 
-
+<div class="icon-container">
+  <div class="icon-box">
+    <i class="fa-regular fa-clock" style="color: #000000;"></i>
+    <h3>Medialunas recién horneadas, siempre</h3>
+    <p>Ahorrá tiempo y dinero, agregando valor a tu empresa. Atrayendo a tus clientes con panificados recién horneados.</p>
+  </div>
+  <div class="icon-box">
+    <i class="fas fa-snowflake"></i>
+    <h3>Del frezzer al horno y a disfrutar</h3>
+    <p>La técnica de congelado permite conservar sabor, aroma y 
+      texturas de nuestros panificados, manteniendo así la calidad de principio a fin.</p>
+  </div>
+  <div class="icon-box">
+    <i class="fa-solid fa-check" style="color: #000000;"></i>
+    <h3>Variedad y buen gusto</h3>
+    <p>Incorporamos nuevos productos que se acercan cada vez más a las necesidades 
+      demandadas por los paladares de nuestros clientes.</p>
+  </div>
+</div>
 
 
     <div class="faq-section">
-      <h1 id="preguntas">Preguntas Frecuentes</h1>
+      <h1 id="preguntas">Preguntas frecuentes</h1>
       <div class="faq-item">
           <div class="question">¿Cómo hago mi pedido?</div>
           <div class="answer">Elegí tus pastas y cantidad, podes visualizar 
-            los productos y precios en el catalogo de <a href="api.whatsapp.com/send?phone=5493515574615"<span class="highlight">WhatsApp</span></a>. Y desde allí
-             mismo realizar la compra y coordinar entrega. Ir al catálogo</div>
+            los productos y precios en el catalogo de WhatsApp. Y desde allí
+             mismo realizar la compra y coordinar entrega.<a href="api.whatsapp.com/send?phone=5493515574615"<span class="highlight"> Ir al catálogo</span></a></div>
       </div>
       <div class="faq-item">
         <div class="question">¿Que cantidad pido?</div>
-        <div class="answer">La cantidad de pasta fresca que se recomienda servir por persona puede variar según varios factores. 
+        <div class="answer">La cantidad de pasta fresca que se recomienda servir por persona puede variar según diversos factores. 
          Dependerá del apetito y el gusto personal de cada individuo. Otro factor a considerar es si la pasta será el plato 
          principal o si se servirá acompañada de otros alimentos. Y del tipo de salsa si es más o menos ligera.<br>
-         En general, suelen ser 6 sorrentinos o <strong> 100 gramos de pasta fresca por persona</strong> según lo que se considera una porción estándar, 
-         ajustar la cantidad según sea necesario.</div>
+         En general, suelen ser 6 sorrentinos o se calcula<strong> 100 gramos de pasta fresca por persona</strong> es una porción estándar. 
+         Ajustar la cantidad según sea necesario.</div>
     </div>
       <div class="faq-item">
           <div class="question">¿Como cocino las pastas?</div>
@@ -379,12 +468,11 @@ Colocar el queso rallado en la superficie y salpimentar a gusto.<br>
             
             <strong>TODAS</strong> nuestras especialidades se pueden freezar.
             Para cocinarlas no se descongelan, van directo del frezzer al agua hirviendo.<br><br>
-          <strong>TIPS</strong>/ Tendremos que estar atentos a que cuando la pasta se esté cocinando el 
-            agua no hierva fuerte, así evitaremos que puedan llegar a romperse.</div>
+          <strong>TIPS</strong>/ Controlar que el agua de cocción no hierva fuerte, así evitaremos que los sorrentinos puedan llegar a romperse.</div>
       </div>
       <div class="faq-item">
           <div class="question">¿Que otra maneras hay de cocinar la pasta?</div>
-          <div class="answer">Otra alternativa es distribuir los sorrentinos y/o ravioles en una placa 
+          <div class="answer">Otra alternativa de disfrutar de tus pastas favoritas es al horno. Muy fácil: distribuir los sorrentinos y/o ravioles en una placa 
             apta para <strong>horno</strong>, llevar a 180º hasta que queden cocidos y dorados. Es una buena manera de
             consumirlos como "snack" o aperitivo.<br><br>
           Otra posibilidad es hacerlos <strong>fritos</strong>, junto con algún dips (untable).</div>
@@ -392,7 +480,7 @@ Colocar el queso rallado en la superficie y salpimentar a gusto.<br>
       
       
            <div class="faq-item">
-            <div class="question">¿Cuales son los medios de pago?</div>
+            <div class="question">¿Cuáles son los medios de pago?</div>
             <div class="answer"> Se recibe efectivo y transferencia.</div>
              </div>
              
@@ -420,11 +508,8 @@ Colocar el queso rallado en la superficie y salpimentar a gusto.<br>
       <div class="background-image"></div>
       <div class="formulario">
         <h1 id="contacto">Escríbenos</h1>
-        <p> Para consultas y petición de lista de precios, al por mayor, por favor completá el siguiente formulario
-          o envianos directamente un mail a 
-            <strong>alimentos.dejavu@gmail.com </strong>. <br>
-          Para pedidos u otras dudas podes comunicarte vía <a href="api.whatsapp.com/send?phone=5493515574615"<span class="highlight">WhatsApp</span></a>.
-    
+        <p> 
+          Completa el siguiente formulario y nos contactaremos a la brevedad.
           ¡Gracias por tu interés!</p>
         <br>
         
@@ -443,7 +528,7 @@ Colocar el queso rallado en la superficie y salpimentar a gusto.<br>
             <label for="message">Mensaje:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
             
-            <button type="submit">Enviar</button>
+            <button type="submit" target="_blank">Enviar</button>
         </form>
     </div>
   </div>
@@ -553,6 +638,132 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const destacados1 = document.getElementById('destacados1');
+    const destacados2 = document.getElementById('destacados2');
+    const modal1 = document.getElementById('modal1');
+    const modal2 = document.getElementById('modal2');
+    const cerrarModal1 = document.getElementById('cerrarModal1');
+    const cerrarModal2 = document.getElementById('cerrarModal2');
+
+    destacados1.addEventListener('click', function () {
+        modal1.style.display = 'block';
+    });
+
+    destacados2.addEventListener('click', function () {
+        modal2.style.display = 'block';
+    });
+
+    cerrarModal1.addEventListener('click', function () {
+        modal1.style.display = 'none';
+    });
+
+    cerrarModal2.addEventListener('click', function () {
+        modal2.style.display = 'none';
+    });
+});
+
+ // Función para verificar si un elemento está visible en la pantalla
+ function isVisible(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Función para verificar si un elemento está visible en la pantalla
+  function isVisible(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Obtener todos los elementos .timeline-item
+  const timelineItems = document.querySelectorAll('.timeline-item');
+
+  // Función para manejar el scroll
+  function handleScroll() {
+    // Iterar sobre cada elemento .timeline-item
+    timelineItems.forEach(item => {
+      // Si el elemento está visible, agregar la clase 'visible'
+      if (isVisible(item)) {
+        item.classList.add('visible');
+      } else {
+        // Si no está visible, asegurarse de quitar la clase 'visible'
+        item.classList.remove('visible');
+      }
+    });
+  }
+
+  // Manejar el evento scroll
+  window.addEventListener('scroll', handleScroll);
+
+  // Llamar a la función handleScroll inicialmente para verificar el estado al cargar la página
+  handleScroll();
+  function showTimeline() {
+    var timelineContainer = document.getElementById('timelineContainer');
+    timelineContainer.classList.add('show-timeline');
+  }
+  var timelineContainer = document.getElementById('timelineContainer');
+  var isTimelineVisible = false;
+
+  function toggleTimeline() {
+    if (!isTimelineVisible) {
+      timelineContainer.classList.add('show-timeline');
+      isTimelineVisible = true;
+    } else {
+      timelineContainer.classList.remove('show-timeline');
+      isTimelineVisible = false;
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('ventanaEmergente');
+        const botonCerrar = document.getElementById('cerrarModal');
+
+        // Mostrar modal al cargar la página
+        modal.style.display = 'block';
+
+        // Cerrar modal al hacer clic en el botón de cerrar
+        botonCerrar.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Cerrar modal al hacer clic fuera del contenido del modal
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    <!-- Script para controlar el modal -->
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('ventanaEmergente');
+        const botonCerrar = document.getElementById('cerrarModal');
+
+        // Mostrar modal al cargar la página
+        modal.style.display = 'block';
+
+        // Cerrar modal al hacer clic en el botón de cerrar
+        botonCerrar.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Cerrar modal al hacer clic fuera del contenido del modal
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
 
   </script>
  <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
