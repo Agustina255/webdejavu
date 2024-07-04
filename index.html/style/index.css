@@ -113,10 +113,18 @@ body {
     }
 
     .titulo h2 {
-        font-size: 2em; /* Reducir el tamaño del título en dispositivos móviles */
+        font-size: 0.3em; /* Reducir el tamaño del título en dispositivos móviles */
+        width: 100%;
+        justify-content: center;
     }
     .titulo h3{
-        font-size: 0.5em;
+        font-size: 0.1em;
+        width: 100%;
+        justify-content: center;
+
+    }
+    .imagen-fondo{
+        height: 100%;
     }
 }
 
@@ -132,13 +140,6 @@ top: 0;
 
 
 
-
-.recetas{
-    margin-top: 50px;
-    margin-bottom: 20px;
-    text-align: center;
-    background-color: beige;
-}
 
 
 
@@ -195,10 +196,6 @@ top: 0;
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        justify-content: center;
-    }
-
     .navbar-container {
         flex-direction: column;
         align-items: center;
@@ -207,10 +204,32 @@ top: 0;
     .nav-list {
         flex-direction: column;
         align-items: center;
+        display: none; /* Ocultar lista de navegación por defecto en dispositivos móviles */
+        position: absolute;
+        top: 100%; /* Alinear lista justo debajo de la barra de navegación */
+        left: 0;
+        width: 100%; /* Ocupar todo el ancho disponible */
+        background-color: #000000; /* Color de fondo del menú */
+        padding: 10px 0; /* Espaciado interior del menú */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para el menú */
+        z-index: 100; /* Asegurar que esté encima del contenido */
+    }
+
+    .nav-list.open {
+        display: flex; /* Mostrar lista de navegación cuando el menú está abierto */
     }
 
     .nav-list li {
-        margin: 5px 0;
+        margin: 10px 0; /* Espaciado entre elementos del menú */
+    }
+
+    .navbar a::before {
+        display: none; /* Ocultar línea bajo los enlaces del menú */
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        order: 2; /* Colocar el ícono del menú después del logo en dispositivos móviles */
     }
 }
 
@@ -234,15 +253,16 @@ top: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     
   }
-  
-  .text-overlay p {
-    font-size: 1.2em;
+  @media (max-width:768px){
+    .text-overlay h1{
+        font-size:1em;
+    }
   }
 
 
 
   .contenedor1{
-    width: 90vh; 
+    width: 100vh; 
     display: inline-block;
     align-items: center;
     padding: 100px;
@@ -449,114 +469,117 @@ top: 0;
 
 
 
+/* Estilos generales del contenedor y recetas */
 .contenedor {
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: auto; /* Centrar el contenedor horizontalmente */
+    max-width: 2300px;
+    margin: auto;
     padding: 20px;
     background-color: beige;
     box-sizing: border-box;
-}
-
-/* Estilos para el encabezado de las recetas */
-.recetas {
+  }
+  
+  .recetas {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.recetas h1 {
-    font-size: 32px;
-    color: rgb(72, 72, 72);
-    margin-bottom: 10px;
-    
-}
-
-.recetas p {
-    color: rgb(107, 107, 107);
-    font-size: 16px;
-}
-
-.contenedor {
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: auto; /* Centrar el contenedor horizontalmente */
-    padding: 20px;
+    margin-top: 50px;
     background-color: beige;
-    box-sizing: border-box;
-}
-
-/* Estilos para el título de recetas */
-.recetas {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.recetas h1 {
+  }
+  
+  .recetas h1 {
     font-size: 32px;
-    color: #333; /* Color del texto del título */
+    color: #333;
     margin-bottom: 10px;
-}
-
-.recetas p {
-    color: #555; /* Color del texto del párrafo */
+  }
+  
+  .recetas p {
+    color: #555;
     font-size: 16px;
-}
-
-/* Estilos para el contenedor de las tarjetas */
-.cards {
+  }
+  
+  /* Estilos para las tarjetas */
+  .cards {
     display: flex;
-    flex-wrap: wrap; /* Asegura que las tarjetas se ajusten en filas */
-    justify-content: space-around; /* Distribución equitativa de las tarjetas */
-    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: nowrap; /* Flexbox para mantener una fila */
+    overflow-x: auto; /* Scroll horizontal para el carrusel */
+    gap: 20px; /* Espacio entre tarjetas */
     margin-top: 20px;
-    
-}
-
-/* Estilos para cada tarjeta individual */
-.card {
-    flex: 1 1 calc(33% - 20px); /* Ajuste para tres tarjetas por fila */
-    max-width: calc(33% - 20px); /* Ancho máximo de cada tarjeta */
+    padding-bottom: 20px;
+  }
+  
+  .card {
+    flex: 1 0 300px; /* Tamaño fijo inicial de las tarjetas */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Evitar que el contenido sobresalga */
-    margin-bottom: 30px;
+    overflow: hidden;
     transition: transform 0.3s ease;
-    
-}
-
-.card:hover {
-    transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
-}
-
-.card img {
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
     width: 100%;
-    height: 200px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Ajuste para mantener la relación de aspecto */
-    border-radius: 8px 8px 0 0; /* Redondear solo la parte superior de la imagen */
-}
-
-.card .content {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card .content {
     padding: 20px;
-}
-
-.card h3 {
+  }
+  
+  .card h3 {
     font-size: 20px;
-    color: #333; /* Color del texto del título */
+    color: #333;
     margin-bottom: 10px;
-}
-
-.card p {
+  }
+  
+  .card p {
     font-size: 16px;
-    color: #555; /* Color del texto del párrafo */
+    color: #555;
     line-height: 1.6;
-}
-
-.botton {
+  }
+  
+  .botton {
     background-color: rgb(148, 150, 150);
     padding: 10px;
     text-align: center;
-}
+    
 
-.leer-mas {
+
+  }
+  .botton-container {
+    display: flex;
+    justify-content: center; /* Alinear botones al centro horizontalmente */
+    gap: 10px; /* Espacio entre botones */
+    margin-top: 20px; /* Espacio desde la última tarjeta hasta los botones */
+   
+  }
+  .card {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .mostrar .text-extendido {
+    display: block; /* Mostrar cuando se expande */
+  }
+  
+  .leer-mas {
+    align-self: flex-end; /* Alinea el botón al final del contenedor */
+    margin-top: auto; /* Empuja el botón hacia abajo */
+  }
+  
+  .leer-mas {
+   
     background-color: #333;
     color: #fff;
     font-size: 16px;
@@ -565,37 +588,42 @@ top: 0;
     padding: 8px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.leer-mas:hover {
+    
+  }
+  
+  .leer-mas:hover {
     background-color: #555;
-}
-
-/* Media Queries para hacer responsive */
-@media (max-width: 1200px) {
+  }
+  .text-extendido {
+    display: none; /* Inicialmente oculto */
+  }
+  
+  .mostrar {
+    display: block; /* Mostrar cuando se expande */
+  }
+  
+  /* Media Queries para hacer responsive */
+  @media (max-width: 1200px) {
     .card {
-        flex: 1 1 calc(50% - 20px); /* Ajuste para dos tarjetas por fila */
-        max-width: calc(50% - 20px);
+      flex: 1 0 calc(50% - 20px);
     }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .card {
-        flex: 1 1 calc(50% - 20px); /* Ajuste para dos tarjetas por fila en pantallas medianas */
-        max-width: calc(50% - 20px);
+      flex: 1 0 calc(50% - 20px);
     }
-}
-
-@media (max-width: 576px) {
+  }
+  
+  @media (max-width: 576px) {
     .card {
-        flex: 1 1 100%; /* Una tarjeta por fila en pantallas pequeñas */
-        max-width: 100%;
+      flex: 1 0 100%;
+      max-width: 100%;
     }
+  }
+  
 
-    .card img {
-        height: 250px; /* Ajuste de altura para las imágenes en pantallas pequeñas */
-    }
-}
+
 .container {
     background: linear-gradient(45deg, rgb(205, 223, 42), rgb(0, 0, 0));
     padding: 40px;
@@ -879,12 +907,12 @@ top: 0;
     }
 
     .destacados {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-        margin-bottom: 20px; /* Espacio entre los elementos en pantallas pequeñas */
+        width: 90%; /* Ocupa todo el ancho en pantallas pequeñas */
+        margin-bottom: 0px; /* Espacio entre los elementos en pantallas pequeñas */
     }
 
     .destacados img {
-        max-height: 250px; /* Altura máxima ajustada para pantallas pequeñas */
+        max-height: 100px; /* Altura máxima ajustada para pantallas pequeñas */
     }
 }
 
@@ -1144,18 +1172,24 @@ button:hover {
         font-size: 0.9rem;
     }
 }
-iframe{
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-    filter: brightness(60%) contrast(200%);
-    border-radius: 20px;}
-.answer iframe {
-        border: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Proporción de aspecto 16:9 (Para videos o mapas, ajusta según necesites) */
+    overflow: hidden;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5)) brightness(60%) contrast(200%);
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 
 
 
