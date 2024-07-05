@@ -306,125 +306,123 @@ top: 0;
     }
 }
 .timeline-container {
-    display: none; /* Ocultar inicialmente el contenido */
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
+  display: none; /* Ocultar inicialmente el contenido */
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.timeline {
+  position: relative;
+  padding: 0 20px;
+  overflow: hidden; /* Para asegurar que la línea no sobresalga */
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0; /* Asegurar que la línea esté detrás de las imágenes */
+}
+
+.timeline-item {
+  padding: 20px 0;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  z-index: 1; /* Asegurar que los elementos estén encima de la línea */
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 4px solid #333;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.3s ease-in-out; /* Transición para el cambio de color */
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -10px;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -10px;
+}
+
+.timeline-item.visible::before {
+  background-color: #333; /* Color de fondo del círculo cuando está lleno */
+}
+
+.timeline-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px 6px 0 0;
+  display: block; /* Asegurar que las imágenes se comporten bien */
+}
+
+.timeline-content .text {
+  padding: 10px 0;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .timeline {
-    position: relative;
-    padding: 0 20px;
-  }
-
-  .timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #333;
-    top: 0;
-    bottom: 0;
+  .timeline-item::before {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  .timeline-item {
-    padding: 20px 0;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
+  .timeline {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .timeline-item:nth-child(odd) {
-    left: 0;
-  }
-
-  .timeline-item:nth-child(even) {
-    left: 50%;
-  }
-
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 4px solid #333;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-    transition: background-color 0.3s ease-in-out; /* Transición para el cambio de color */
-  }
-
-  .timeline-item:nth-child(odd)::before {
-    right: -10px;
-  }
-
-  .timeline-item:nth-child(even)::before {
-    left: -10px;
-  }
-
-  .timeline-item.visible::before {
-    background-color: #333; /* Color de fondo del círculo cuando está lleno */
-  }
-
-  .timeline-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 6px;
-    position: relative;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .timeline-content img {
+  .timeline::after {
+    left: 0; /* Posicionar la línea al principio en pantallas pequeñas */
+    transform: none;
     width: 100%;
-    height: auto;
-    border-radius: 6px 6px 0 0;
+    height: 6px;
+    top: auto;
+    bottom: 0;
   }
 
-  .timeline-content .text {
-    padding: 10px 0;
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    left: 0; /* Alinear todos los elementos a la izquierda */
   }
+}
 
-  /* Media query para pantallas más pequeñas */
-  @media (max-width: 768px) {
-    .timeline-item {
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .timeline-item::before {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .timeline-content {
-      width: calc(100% - 40px);
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  .show-timeline {
-    display: block !important; /* Mostrar el contenido */
-  }
-
-  .show-button {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 70px;
-    background-color: beige;
-  }
-
-  .show-button button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 20px;
-  }
 
 .horizontal-line {
     width: 50%;
