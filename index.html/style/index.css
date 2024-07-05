@@ -143,7 +143,7 @@ top: 0;
 
 
 
-  .navbar {
+.navbar {
     display: flex;
     justify-content: center;
     background-color: #000000;
@@ -202,8 +202,6 @@ top: 0;
     }
 
     .nav-list {
-        flex-direction: column;
-        align-items: center;
         display: none; /* Ocultar lista de navegación por defecto en dispositivos móviles */
         position: absolute;
         top: 100%; /* Alinear lista justo debajo de la barra de navegación */
@@ -217,6 +215,8 @@ top: 0;
 
     .nav-list.open {
         display: flex; /* Mostrar lista de navegación cuando el menú está abierto */
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav-list li {
@@ -230,8 +230,10 @@ top: 0;
     .menu-icon {
         cursor: pointer;
         order: 2; /* Colocar el ícono del menú después del logo en dispositivos móviles */
+        display: block; /* Mostrar el ícono del menú */
     }
 }
+
 
 .video{
     width: 100%; 
