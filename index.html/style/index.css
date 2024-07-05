@@ -1,4 +1,5 @@
 
+
 *{  font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
@@ -113,12 +114,12 @@ body {
     }
 
     .titulo h2 {
-        font-size: 0.3em; /* Reducir el tamaño del título en dispositivos móviles */
+        font-size: 2em; /* Reducir el tamaño del título en dispositivos móviles */
         width: 100%;
         justify-content: center;
     }
     .titulo h3{
-        font-size: 0.1em;
+        font-size: 1em;
         width: 100%;
         justify-content: center;
 
@@ -137,8 +138,6 @@ a{
 top: 0;
 
 }
-
-
 
 
 
@@ -256,174 +255,182 @@ top: 0;
     
   }
   @media (max-width:768px){
-    .text-overlay h1{
-        font-size:1em;
+    .text-overlay h1{ display: none;
     }
   }
 
-
-
-  .contenedor1{
-    width: 100vh; 
-    display: inline-block;
-    align-items: center;
-    padding: 100px;
+  .contenedor1 {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
     background-color: beige;
     box-sizing: border-box;
     margin: auto;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-
-.historia {
-    margin: 50px auto;
+  }
+  
+  .historia {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 0 20px;
     background-color: beige;
-}
-
-.historia h1 {
-    margin-bottom: 30px;
-}
-
-.historia p {
+  }
+  
+  .historia h1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .historia p {
     border-left: 8px solid #FFF94D;
     padding-left: 20px;
-} 
-@media screen and (max-width: 768px) {
-    .contenedor1 {
-        width: 100%;
-        padding: 10px;
-    }
-    .historia {
-        margin: 20px;
-    }
-    .historia p {
-        border-left: none;
-        padding-left: 0;
-    }
-}
-.timeline-container {
-  display: none; /* Ocultar inicialmente el contenido */
-  padding: 20px;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-.timeline {
-  position: relative;
-  padding: 0 20px;
-  overflow: hidden; /* Para asegurar que la línea no sobresalga */
-}
-
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: #333;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0; /* Asegurar que la línea esté detrás de las imágenes */
-}
-
-.timeline-item {
-  padding: 20px 0;
-  position: relative;
-  width: 50%;
-  box-sizing: border-box;
-  z-index: 1; /* Asegurar que los elementos estén encima de la línea */
-}
-
-.timeline-item:nth-child(odd) {
-  left: 0;
-}
-
-.timeline-item:nth-child(even) {
-  left: 50%;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border: 4px solid #333;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 2;
-  transition: background-color 0.3s ease-in-out; /* Transición para el cambio de color */
-}
-
-.timeline-item:nth-child(odd)::before {
-  right: -10px;
-}
-
-.timeline-item:nth-child(even)::before {
-  left: -10px;
-}
-
-.timeline-item.visible::before {
-  background-color: #333; /* Color de fondo del círculo cuando está lleno */
-}
-
-.timeline-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 6px;
-  position: relative;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px 6px 0 0;
-  display: block; /* Asegurar que las imágenes se comporten bien */
-}
-
-.timeline-content .text {
-  padding: 10px 0;
-}
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .timeline-item {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    margin-bottom: 30px;
   }
-
-  .timeline-item::before {
+  
+  .show-button {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .show-button button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .timeline-container {
+    display: none; /* Ocultar inicialmente el contenido */
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 0 20px;
+    overflow: hidden; /* Para asegurar que la línea no sobresalga */
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
   }
-
-  .timeline {
-    padding-left: 0;
-    padding-right: 0;
+  
+  .timeline-item {
+    padding: 20px 0;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
   }
-
-  .timeline::after {
-    left: 0; /* Posicionar la línea al principio en pantallas pequeñas */
-    transform: none;
-    width: 100%;
-    height: 6px;
-    top: auto;
-    bottom: 0;
+  
+  .timeline-item:nth-child(odd) {
+    left: 0;
   }
-
-  .timeline-item:nth-child(odd),
+  
   .timeline-item:nth-child(even) {
-    left: 0; /* Alinear todos los elementos a la izquierda */
+    left: 50%;
   }
-}
-
-
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 4px solid #333;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s ease-in-out; /* Transición para el cambio de color */
+  }
+  
+  .timeline-item:nth-child(odd)::before {
+    right: -10px;
+  }
+  
+  .timeline-item:nth-child(even)::before {
+    left: -10px;
+  }
+  
+  .timeline-item.visible::before {
+    background-color: #333; /* Color de fondo del círculo cuando está lleno */
+  }
+  
+  .timeline-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px 6px 0 0;
+    display: block; /* Asegurar que las imágenes se comporten bien */
+  }
+  
+  .timeline-content .text {
+    padding: 10px 0;
+  }
+  
+  /* Mostrar la línea de tiempo cuando se active la clase */
+  .timeline-container.show-timeline {
+    display: block;
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .contenedor1 {
+      padding: 20px;
+    }
+  
+    .historia {
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+  
+    .show-button {
+      margin-bottom: 20px;
+    }
+  
+    .timeline-container {
+      display: block; /* Mostrar la línea de tiempo en pantallas pequeñas */
+    }
+  
+    .timeline::after {
+      left: 50%;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .timeline-item::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .timeline-content {
+      width: calc(100% - 40px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
 .horizontal-line {
     width: 50%;
     height: 1px;
@@ -907,7 +914,7 @@ top: 0;
     }
 
     .destacados {
-        width: 90%; /* Ocupa todo el ancho en pantallas pequeñas */
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
         margin-bottom: 0px; /* Espacio entre los elementos en pantallas pequeñas */
     }
 
