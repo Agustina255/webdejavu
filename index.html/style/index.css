@@ -1,5 +1,4 @@
 
-
 *{  font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
@@ -114,12 +113,12 @@ body {
     }
 
     .titulo h2 {
-        font-size: 2em; /* Reducir el tamaño del título en dispositivos móviles */
+        font-size: 1em; /* Reducir el tamaño del título en dispositivos móviles */
         width: 100%;
         justify-content: center;
     }
     .titulo h3{
-        font-size: 1em;
+        font-size: 0.5em;
         width: 100%;
         justify-content: center;
 
@@ -258,7 +257,6 @@ top: 0;
     .text-overlay h1{ display: none;
     }
   }
-
   .contenedor1 {
     width: 100%;
     display: flex;
@@ -829,25 +827,28 @@ top: 0;
 .productosdestacados {
     display: flex;
     overflow: hidden; /* Evita el desbordamiento de los elementos flexibles */
-}
-
-.destacados {
+    justify-content: space-around; /* Distribuye los elementos de forma equitativa */
+    background-color: beige;
+  }
+  
+  .destacados {
     flex: 1; /* Ocupa el espacio disponible */
     max-width: 100%; /* Ajuste para garantizar que no haya desbordamiento en pantallas pequeñas */
     background-color: beige;
-  
     overflow: hidden;
     position: relative;
-}
-
-.destacados img {
+    text-align: center; /* Centra el contenido */
+    margin: 10px; /* Espacio entre los elementos */
+  }
+  
+  .destacados img {
     width: 100%;
     height: auto; /* Se ajusta automáticamente según el ancho */
     max-height: 400px; /* Altura máxima para las imágenes */
     object-fit: cover;
-}
-
-.textdestacados {
+  }
+  
+  .textdestacados {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -858,21 +859,34 @@ top: 0;
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
-}
-
-.textdestacados h1, .textdestacados p {
+  }
+  
+  .textdestacados h1, .textdestacados p {
     margin: 0;
-}
-
-.textdestacados h1 {
+  }
+  
+  .textdestacados h1 {
     color: black;
     background-color: #FFF94D;
     margin-bottom: 10px;
     border-radius: 40px;
-}
-
-/* Estilos para los modales */
-.modal {
+  }
+  
+  .show-modal {
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .show-modal:hover {
+    background-color: #555;
+  }
+  
+  /* Estilos para los modales */
+  .modal {
     display: none;
     position: fixed;
     top: 0;
@@ -881,9 +895,9 @@ top: 0;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-}
-
-.contenido-modal {
+  }
+  
+  .contenido-modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -892,37 +906,36 @@ top: 0;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-}
-
-.modal span {
+  }
+  
+  .cerrar-modal {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 30px;
     color: #aaa;
     cursor: pointer;
-}
-
-.modal span:hover {
+  }
+  
+  .cerrar-modal:hover {
     color: black;
-}
-
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .productosdestacados {
-        flex-direction: column; /* Cambia el flujo a columna en pantallas pequeñas */
+      flex-direction: column; /* Cambia el flujo a columna en pantallas pequeñas */
     }
-
+  
     .destacados {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-        margin-bottom: 0px; /* Espacio entre los elementos en pantallas pequeñas */
+      width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+      margin-bottom: 20px; /* Espacio entre los elementos en pantallas pequeñas */
     }
-
+  
     .destacados img {
-        max-height: 100px; /* Altura máxima ajustada para pantallas pequeñas */
+      max-height: 200px; /* Altura máxima ajustada para pantallas pequeñas */
     }
-}
-
+  }
+  
 
 
   .icon-container {
