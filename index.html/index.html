@@ -53,8 +53,8 @@
           <source src="img\6942473-hd_1920_1080_25fps.mp4" type="video/mp4">
           <source src="img\6942473-hd_1920_1080_25fps.mp4" type="video/webm">    </video>
           <div class="text-overlay">
-            <h1>ESTAMOS PRODUCIENDO </h1>
-          </div>
+            <h1> ¡OBTÉN PRODUCTOS CASEROS Y DE CALIDAD, EN POCOS MINUTOS!</h1>
+        </div>
         </div>
         
 
@@ -65,10 +65,10 @@
               <span class="cerrar-modal" id="cerrarModal">&times;</span>
               <div class="imagen-fondo">
                   <!-- Aquí puedes colocar la imagen de fondo que desees -->
-                  <img src="img\Imagen de WhatsApp 2024-05-27 a las 15.12.02_267ac601.jpg" alt="Imagen de Fondo">
+                  <img src="img\sorrentino.jpg" height="850px" width="100%" alt="Imagen de Fondo">
                   <div class="titulo">
                       <h2>¿Qué tenés ganas de comer hoy?</h2>
-                      <h3>TODOS LOS MARTES DESCUENTO EN RAVIOLES</h3>
+                      <h3>TODOS LOS MIÉRCOLES HAY DESCUENTOS</h3>
                   </div>
               </div>
           </div>
@@ -80,7 +80,7 @@
       <div class="contenedor1">
         <div id="nosotros" class="historia">
           <h1>Desde 2019, en el corazón de Córdoba</h1>
-          <p>Creemos en las largas sobremesas, en la esencia y el valor de lo casero.<br>
+          <p>
             Nos inspira poder ser parte de tu mesa, por eso surge <strong>Dejávù</strong>. La posibilidad de acompañarte a vos y a tu familia,
             con nuestras masas artesanales.<br>
             Tenemos un claro propósito; resolver tus comidas y brindarte sabores reconfortables, que perduren en tu memoria y paladar.</p>
@@ -187,10 +187,9 @@
       </p>
     </div>
 
-
     <div class="contenedor">
       <div class="recetas">
-      <h1 id="recetas">#DéjàvuRecetas para que pruebes!</h1><br>
+      <h1 id="recetas">#DéjàvuRecetas para que pruebes!</h1>
       <p>El éxito de una buena pasta, es acompañarla de una exquisita salsa. </p>
     </div>
       <div class="cards">
@@ -425,10 +424,10 @@
   </div>
     </div>
     </div>
+
     
+  </div> 
   
-   
-   
 
  <div class="fondoamarillo">
     <div class="testimonial-section">
@@ -659,7 +658,9 @@
         </div>
         
           
-    </header>    
+    </header>
+      
+    <script src="https://www.paypal.com/sdk/js?client-id=TU_CLIENT_ID_PAYPAL"></script>
     <script src="script.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -752,16 +753,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
- // Función para verificar si un elemento está visible en la pantalla
- function isVisible(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
 
   // Función para verificar si un elemento está visible en la pantalla
   function isVisible(element) {
@@ -879,37 +870,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 function toggleTimeline() {
-      var timelineContainer = document.getElementById('timelineContainer');
-      timelineContainer.classList.toggle('show-timeline');
-    }
-    function toggleTimeline() {
-    var timelineContainer = document.getElementById('timelineContainer');
-    var button = document.querySelector('.show-button button');
-    
-    if (timelineContainer.style.display === 'none' || timelineContainer.style.display === '') {
-      timelineContainer.style.display = 'block';
-      button.textContent = 'Cerrar';
-    } else {
-      timelineContainer.style.display = 'none';
-      button.textContent = 'Más historia';
-    }
+  var timelineContainer = document.getElementById('timelineContainer');
+  var button = document.querySelector('.show-button button');
+  
+  timelineContainer.classList.toggle('show-timeline'); // Toggle para mostrar/ocultar la línea de tiempo
+  
+  // Cambiar el texto del botón según el estado de visibilidad de la línea de tiempo
+  if (timelineContainer.classList.contains('show-timeline')) {
+    button.textContent = 'Cerrar';
+  } else {
+    button.textContent = 'Más historia';
   }
-  function toggleModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-  }
- 
+}
 const menuIcon = document.querySelector('.menu-icon');
 const navList = document.querySelector('.nav-list');
 
 menuIcon.addEventListener('click', () => {
   navList.classList.toggle('open');
+  menuIcon.classList.toggle('open');
 });
 
-function toggleTimeline() {
-  var timelineContainer = document.getElementById('timelineContainer');
-  timelineContainer.classList.toggle('show-timeline');
-}
+    
+        
+
 
 
   </script>
