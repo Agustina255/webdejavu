@@ -751,15 +751,17 @@ display: block;
 
 @media (max-width: 768px) {
   .card {
-    flex: 1 0 calc(50% - 50px);
+    flex: 0 0 300px; /* Tamaño fijo para cada tarjeta */
+    width: 300px; /* Asegura que el tamaño de las tarjetas se mantenga */
   }
 }
 
 @media (max-width: 576px) {
   .card {
-    flex: 1 0 100%;
-    max-width: 100%;
+    flex: 0 0 250px; /* Ajusta el tamaño si es necesario */
+    width: 250px; /* Asegura que el tamaño de las tarjetas se mantenga */
   }
+  
 }
 
 
@@ -958,7 +960,7 @@ display: block;
       border-bottom: 8px solid transparent;
   }
 }
-/* Estilos para la sección destacada */
+/* Estilos base para la sección destacada */
 .productosdestacados {
   display: flex;
   overflow: hidden; /* Evita el desbordamiento de los elementos flexibles */
@@ -987,7 +989,6 @@ display: block;
   position: absolute;
   top: 50%;
   left: 50%;
-  
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
@@ -999,14 +1000,13 @@ display: block;
 
 .textdestacados h1, .textdestacados p {
   margin: 0;
-
 }
 
 .textdestacados h1 {
   color: black;
   background-color: #FFF94D;
-
   border-radius: 40px;
+  font-size: 2em; /* Tamaño de fuente base para pantallas grandes */
 }
 
 .show-modal {
@@ -1040,7 +1040,6 @@ display: block;
   margin: 5%;
   width: 80%;
   max-width: 600px;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1049,7 +1048,6 @@ display: block;
   border-radius: 10px;
   text-align: center;
 }
-
 
 .cerrar-modal {
   position: absolute;
@@ -1069,16 +1067,22 @@ display: block;
     flex-direction: column; /* Cambia el flujo a columna en pantallas pequeñas */
   }
 
-  .destacados {
+  .textdestacados {
     width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    height: 80%;
+    height: 50%;
     margin-bottom: 10px; /* Espacio entre los elementos en pantallas pequeñas */
+    padding: 10px; /* Ajustar el padding para mantener el diseño en pantallas pequeñas */
+  }
+
+  .textdestacados h1 {
+    font-size: 1.5em; /* Tamaño de fuente reducido para pantallas pequeñas */
   }
 
   .destacados img {
-    max-height: 300px; /* Altura máxima ajustada para pantallas pequeñas */
+    max-height: 450px; /* Altura máxima ajustada para pantallas pequeñas */
   }
 }
+
 
 
 
