@@ -30,6 +30,11 @@
       <nav class="navbar">
         <div class="navbar-container">
             <a href="../index.html" class="logo"><img src="img/CC_20211109_071207.png" width="75px" alt="Logo"></a>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-list">
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#productos">Productos</a></li>
@@ -38,13 +43,9 @@
                 <li><a href="#preguntas">Preguntas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <div class="menu-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
         </div>
-      </nav>
+    </nav>
+    
     
     
     
@@ -729,13 +730,15 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 document.addEventListener('DOMContentLoaded', function () {
+    // Obtener elementos del DOM
     const destacados1 = document.getElementById('destacados1');
     const destacados2 = document.getElementById('destacados2');
     const modal1 = document.getElementById('modal1');
     const modal2 = document.getElementById('modal2');
-    const cerrarModal1 = document.getElementById('cerrarModal1');
-    const cerrarModal2 = document.getElementById('cerrarModal2');
+    const cerrarModal1 = modal1.querySelector('.cerrar-modal');
+    const cerrarModal2 = modal2.querySelector('.cerrar-modal');
 
+    // Mostrar modales
     destacados1.addEventListener('click', function () {
         modal1.style.display = 'block';
     });
@@ -744,12 +747,23 @@ document.addEventListener('DOMContentLoaded', function () {
         modal2.style.display = 'block';
     });
 
+    // Cerrar modales
     cerrarModal1.addEventListener('click', function () {
         modal1.style.display = 'none';
     });
 
     cerrarModal2.addEventListener('click', function () {
         modal2.style.display = 'none';
+    });
+
+    // Cerrar modales al hacer clic fuera del contenido
+    window.addEventListener('click', function (event) {
+        if (event.target === modal1) {
+            modal1.style.display = 'none';
+        }
+        if (event.target === modal2) {
+            modal2.style.display = 'none';
+        }
     });
 });
 
@@ -861,14 +875,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuIcon = document.querySelector('.menu-icon');
     const navList = document.querySelector('.nav-list');
 
     menuIcon.addEventListener('click', function() {
         navList.classList.toggle('open');
+        menuIcon.classList.toggle('open');
     });
 });
+
 function toggleTimeline() {
   var timelineContainer = document.getElementById('timelineContainer');
   var button = document.querySelector('.show-button button');
