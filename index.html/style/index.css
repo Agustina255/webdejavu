@@ -1069,7 +1069,7 @@ display: block;
 
   .textdestacados {
     width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    height: 50%;
+    height: 100%;
     margin-bottom: 10px; /* Espacio entre los elementos en pantallas pequeñas */
     padding: 10px; /* Ajustar el padding para mantener el diseño en pantallas pequeñas */
   }
@@ -1079,7 +1079,7 @@ display: block;
   }
 
   .destacados img {
-    max-height: 450px; /* Altura máxima ajustada para pantallas pequeñas */
+    max-height: 700px; /* Altura máxima ajustada para pantallas pequeñas */
   }
 }
 
