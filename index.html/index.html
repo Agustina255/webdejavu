@@ -876,15 +876,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.querySelector('.menu-icon');
-    const navList = document.querySelector('.nav-list');
 
-    menuIcon.addEventListener('click', function() {
-        navList.classList.toggle('open');
-        menuIcon.classList.toggle('open');
-    });
-});
 
 function toggleTimeline() {
   var timelineContainer = document.getElementById('timelineContainer');
@@ -899,13 +891,24 @@ function toggleTimeline() {
     button.textContent = 'Más historia';
   }
 }
-const menuIcon = document.querySelector('.menu-icon');
-const navList = document.querySelector('.nav-list');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navList = document.querySelector('.nav-list');
 
-menuIcon.addEventListener('click', () => {
-  navList.classList.toggle('open');
-  menuIcon.classList.toggle('open');
+    menuIcon.addEventListener('click', function() {
+        navList.classList.toggle('open');
+        menuIcon.classList.toggle('open');
+    });
+
+    // Cierra el menú si el usuario hace clic fuera del menú (opcional)
+    document.addEventListener('click', function(event) {
+        if (!menuIcon.contains(event.target) && !navList.contains(event.target)) {
+            navList.classList.remove('open');
+            menuIcon.classList.remove('open');
+        }
+    });
 });
+
 
     
         
