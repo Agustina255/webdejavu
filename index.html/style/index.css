@@ -363,64 +363,67 @@ top: 0;
 /* Estilos para el menú hamburguesa en pantallas pequeñas */
 @media (max-width: 600px) {
   .navbar-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-list {
-      display: none; /* Ocultar lista de navegación por defecto en dispositivos móviles */
-      position: absolute;
-      top: 60px; /* Ajustar la posición del menú debajo de la barra de navegación */
-      left: 0;
-      width: 100%; /* Ocupar todo el ancho disponible */
-      background-color: #000000; /* Color de fondo del menú */
-      padding: 10px 0; /* Espaciado interior del menú */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para el menú */
-      z-index: 100; /* Asegurar que esté encima del contenido */
-      text-align: center; /* Centrar el texto en el menú */
+    display: none; /* Ocultar lista de navegación por defecto en dispositivos móviles */
+    position: absolute;
+    top: 60px; /* Ajustar la posición del menú debajo de la barra de navegación */
+    left: 0;
+    width: 100%; /* Ocupar todo el ancho disponible */
+    background-color: #000000; /* Color de fondo del menú */
+    padding: 10px 0; /* Espaciado interior del menú */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para el menú */
+    z-index: 100; /* Asegurar que esté encima del contenido */
+    text-align: center; /* Centrar el texto en el menú */
+    transition: max-height 0.3s ease-out; /* Animar la apertura/cierre del menú */
+    overflow: hidden; /* Ocultar el desbordamiento */
   }
 
   .nav-list.open {
-      display: flex; /* Mostrar lista de navegación cuando el menú está abierto */
-      flex-direction: column;
-      align-items: center;
+    display: flex; /* Mostrar lista de navegación cuando el menú está abierto */
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-list li {
-      margin: 10px 0; /* Espaciado entre elementos del menú */
+    margin: 10px 0; /* Espaciado entre elementos del menú */
   }
 
   .navbar a::before {
-      display: none; /* Ocultar línea bajo los enlaces del menú */
+    display: none; /* Ocultar línea bajo los enlaces del menú */
   }
 
   .menu-icon {
-      cursor: pointer;
-      order: 2; /* Colocar el ícono del menú después del logo en dispositivos móviles */
-      display: block; /* Mostrar el ícono del menú */
+    cursor: pointer;
+    order: 2; /* Colocar el ícono del menú después del logo en dispositivos móviles */
+    display: block; /* Mostrar el ícono del menú */
   }
 
   .menu-icon span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background-color: #ffffff;
-      margin: 5px;
-      transition: transform 0.4s, opacity 0.4s;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+    transition: transform 0.4s, opacity 0.4s;
   }
 
   .menu-icon.open span:nth-child(1) {
-      transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
   }
 
   .menu-icon.open span:nth-child(2) {
-      opacity: 0;
+    opacity: 0;
   }
 
   .menu-icon.open span:nth-child(3) {
-      transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }
+
 
 .video{
   width: 100%; 
@@ -1068,11 +1071,12 @@ display: block;
 
   .destacados {
     width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    height: 80%;
     margin-bottom: 10px; /* Espacio entre los elementos en pantallas pequeñas */
   }
 
   .destacados img {
-    max-height: 500px; /* Altura máxima ajustada para pantallas pequeñas */
+    max-height: 300px; /* Altura máxima ajustada para pantallas pequeñas */
   }
 }
 
